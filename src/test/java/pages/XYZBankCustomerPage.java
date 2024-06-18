@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
+//java -jar selenium-server-4.21.0.jar standalone terminaldeki tetikleyici
 
 public class XYZBankCustomerPage {
 

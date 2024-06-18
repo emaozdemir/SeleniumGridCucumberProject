@@ -37,48 +37,48 @@
         </dependency>
     </dependencies>
 
-    <build>
-        <plugins>
+<!--    <build>-->
+<!--        <plugins>-->
 
-            <!-- Failsafe, testin güvenli bir şekilde başarısız olmasına yardımcı olur -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-failsafe-plugin</artifactId>
-                <version>3.0.0-M1</version>
-                <configuration>
-                    <testFailureIgnore>true</testFailureIgnore>
-                    <skipTests>false</skipTests>
-                    <includes>
-                        <include>**/runners/*TestRunner*.java</include>
-                    </includes>
-                </configuration>
-            </plugin>
+<!--            &lt;!&ndash; Failsafe, testin güvenli bir şekilde başarısız olmasına yardımcı olur &ndash;&gt;-->
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-failsafe-plugin</artifactId>-->
+<!--                <version>3.0.0-M1</version>-->
+<!--                <configuration>-->
+<!--                    <testFailureIgnore>true</testFailureIgnore>-->
+<!--                    <skipTests>false</skipTests>-->
+<!--                    <includes>-->
+<!--                        <include>**/runners/*TestRunner*.java</include>-->
+<!--                    </includes>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
 
-            <!-- Surefire eklentisi testleri paralel olarak çalıştırmak için kullanılır, paralel çalıştırma ayarları yapılır. -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.0.0-M1</version>
-                <configuration>
-                    <parallel>methods</parallel>
-                    <forkMode>perthread</forkMode>
-                    <threadCount>3</threadCount>
-                    <reuseForks>false</reuseForks>
-                    <argLine>-Duser.language=en</argLine>
-                    <argLine>-Xmx1024m</argLine>
-                    <argLine>-XX:MaxPermSize=256m</argLine>
-                    <argLine>-Dfile.encoding=UTF-8</argLine>
-                    <useFile>false</useFile>
-                    <includes>
-                        <include>Runner.java</include> <!-- Burada çalışacak Runner class belirtilir -->
-                    </includes>
-                    <testFailureIgnore>true</testFailureIgnore>
-                </configuration>
-            </plugin>
+<!--            &lt;!&ndash; Surefire eklentisi testleri paralel olarak çalıştırmak için kullanılır, paralel çalıştırma ayarları yapılır. &ndash;&gt;-->
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-surefire-plugin</artifactId>-->
+<!--                <version>3.0.0-M1</version>-->
+<!--                <configuration>-->
+<!--                    <parallel>methods</parallel>-->
+<!--                    <forkMode>perthread</forkMode>-->
+<!--                    <threadCount>3</threadCount>-->
+<!--                    <reuseForks>false</reuseForks>-->
+<!--                    <argLine>-Duser.language=en</argLine>-->
+<!--                    <argLine>-Xmx1024m</argLine>-->
+<!--                    <argLine>-XX:MaxPermSize=256m</argLine>-->
+<!--                    <argLine>-Dfile.encoding=UTF-8</argLine>-->
+<!--                    <useFile>false</useFile>-->
+<!--                    <includes>-->
+<!--                        <include>Runner.java</include> &lt;!&ndash; Burada çalışacak Runner class belirtilir &ndash;&gt;-->
+<!--                    </includes>-->
+<!--                    <testFailureIgnore>true</testFailureIgnore>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
 
 
-        </plugins>
+<!--        </plugins>-->
 
-    </build>
+<!--    </build>-->
 
 </project>
